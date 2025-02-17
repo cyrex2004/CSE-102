@@ -1,1 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h> //stdlib.h here lets us use absolute (abs) formula
+int main(){
+    int a, b, c, maior;
+    scanf("%d %d %d", &a, &b, &c);
+    maior = (a+b+abs(a-b))/2; //abs means absolute difference between two integers
+    maior = (maior+c+abs(maior-c))/2;
+    printf("%d eh o maior\n", maior);
 
+    return 0;
+}
