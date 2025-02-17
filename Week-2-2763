@@ -1,1 +1,21 @@
+#include <stdio.h>
+int main()
+{
+    //XXX.YYY.ZZZ-DD
+    char xxx[4]; //though we will store three characters as string we need extra one space for null terminator, thats why we gave 4 in the square bracket
+    char fs1; //as full stop and hyphen are single character, we are taking them as char and %c
+    char yyy[4];
+    char fs2;
+    char zzz[4];
+    char hp;
+    char dd[3];
 
+    scanf("%3s%c%3s%c%3s%c%2s", &xxx, &fs1, &yyy, &fs2, &zzz, &hp, &dd);
+
+    printf("%s\n",xxx);
+    printf("%s\n",yyy);
+    printf("%s\n",zzz);
+    printf("%s\n",dd);
+
+    return 0;
+}
