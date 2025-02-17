@@ -1,1 +1,12 @@
-
+#include <stdio.h>
+int main()
+{
+    //to use quotation mark we need give a backslash before both of the quotation mark
+    //to make a tab between r and t, we used /t.
+    //to use a backslash, we need to type backslash twice and the computer will take it as a single backslash
+    printf("\"Ro'b'er\tto\\/\"\n");
+    printf("(._.) ( l: ) ( .-. ) ( :l ) (._.)\n");
+    printf("(^_-) (-_-) (-_^)\n");
+    printf("(\"_\") ('.')\n");
+    return 0;
+}
