@@ -1,1 +1,18 @@
+//to solve this problem we need take every input as a character rather than integer
+#include <stdio.h>
+int main()
+{
+    //DD/MM/YY
+    char dd[3];
+    char sl1;
+    char mm[3];
+    char sl2;
+    char yy[3];
+    scanf("%2s%c%2s%c%2s",&dd, &sl1, &mm, &sl2, &yy);
 
+    printf("%s%c%s%c%s\n", mm,sl1,dd,sl2,yy); //MM/DD/YY
+    printf("%s%c%s%c%s\n", yy,sl1,mm,sl2,dd); //YY/MM/DD
+    printf("%s-%s-%s\n", dd,mm,yy); //DD-MM-YY
+
+    return 0;
+}
