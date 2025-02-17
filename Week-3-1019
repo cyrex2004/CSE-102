@@ -1,1 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int N; //lets say N = 556
+    scanf("%d",&N);
 
+    int hour = N/3600; //hour = 0
+    N = N%3600; //remainder = new N = 556
+
+    int minute = N/60; // minute = 556/60 = 9
+    N = N%60; // remainder = new N = 16
+
+    int second = N;
+
+    printf("%d:%d:%d\n",hour,minute,second);
+    return 0;
+}
