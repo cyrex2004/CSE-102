@@ -1,1 +1,12 @@
+#include <stdio.h>
+int main()
+{
+    long long A, B; //as the value of A and B can be huge thats why we are using long long variable.
 
+    scanf("%lld %lld", &A, &B);
+
+    long long sum = (B*(B+1) - A*(A-1))/2;
+    printf("%lld\n", sum);
+
+    return 0;
+}
