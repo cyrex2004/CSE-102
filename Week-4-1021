@@ -1,0 +1,92 @@
+#include <stdio.h>
+int main()
+{
+    //first we take the amount as double precision.
+    double amount;
+    scanf("%lf", &amount); //say amount = 576.73
+
+    //wee need to get rid of the decimal point so we need to multiply the amount by 100.
+    amount = amount * 100; //amount = 57673.00
+
+    //though we got rid of the decimal point, amount is still double format. so we need to convert it to integer
+    //to do this, we will assign the value to take a new integer value and assign it to the amount
+    int money;
+    money = amount; //money = 57673
+
+    printf("NOTAS:\n");
+
+    //as we have multiplied the amount with 100, we must multiply every derivation with 100 too
+    //to preserve the equality
+
+    //100 bucks
+    int buck100;
+    buck100 = money/(100*100); //buck 100 = 5
+    printf("%d nota(s) de R$ 100.00\n",buck100);
+
+    //50 bucks
+    int buck50;
+    money = money%(100*100); //remainder = 7673
+    buck50 = money/(50*100); //buck50 = 1
+    printf("%d nota(s) de R$ 50.00\n", buck50);
+
+    //20 bucks
+    int buck20;
+    money = money%(50*100); //remainder = 2673
+    buck20 = money/(20*100); //buck 20 = 1
+    printf("%d nota(s) de R$ 20.00\n",buck20);
+
+    //10 bucks
+    int buck10;
+    money = money%(20*100); //remainder = 673
+    buck10 = money/(10*100); //buck 10 = 0
+    printf("%d nota(s) de R$ 10.00\n",buck10);
+
+    //5 bucks
+    int buck5;
+    money = money%(10*100); //remainder = 673
+    buck5 = money/(5*100); //buck 5 = 1
+    printf("%d nota(s) de R$ 5.00\n",buck5);
+
+    //2 bucks
+    int buck2;
+    money = money%(5*100); //remainder = 173
+    buck2 = money/(2*100); //buck 2 = 0
+    printf("%d nota(s) de R$ 2.00\n",buck2);
+
+    //pennies
+    printf("MOEDAS:\n");
+
+    //1 bucks
+    int buck1;
+    money = money%(2*100); //remainder = 173
+    buck1 = money/(1*100); //buck 1 = 1
+    printf("%d moeda(s) de R$ 1.00\n",buck1);
+
+    int penny50;
+    money = money%(1*100); //remainder = 73
+    penny50 = money/50; // here the actual operation is 0.5*100= 50
+    printf("%d moeda(s) de R$ 0.50\n",penny50);
+
+    int penny25;
+    money = money%50;
+    penny25 = money/25;
+    printf("%d moeda(s) de R$ 0.25\n",penny25);
+
+    int penny10;
+    money = money%25;
+    penny10 = money/10;
+    printf("%d moeda(s) de R$ 0.10\n",penny10);
+
+    int penny5;
+    money = money%10;
+    penny5 = money/5;
+    printf("%d moeda(s) de R$ 0.05\n",penny5);
+
+    int penny1;
+    money = money%5;
+    penny1 = money/1;
+    printf("%d moeda(s) de R$ 0.01\n",penny1);
+
+
+    return 0;
+}
