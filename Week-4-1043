@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+    //we can determine if three values are going to form a triangle
+    //or not by the inequality theorem
+    // a+b>c , b+c>a,c+a>b all these three condition must be satisfied
+
+    float A, B, C, Area,perimeter;
+    scanf("%f %f %f", &A, &B, &C);
+
+    if (A+B>C && B+C>A && C+A>B)
+    {
+        perimeter = A+B+C;
+        printf("Perimetro = %.1f\n",perimeter);
+    }
+
+    else
+    {
+        Area = ((A+B)/2)*C;
+        printf("Area = %.1f\n",Area);
+    }
+
+    return 0;
+}
