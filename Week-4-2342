@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+    int n,p,q;
+    char op;
+    scanf("%d",&n);
+    scanf("%d %c %d", &p, &op, &q);
+
+    if (op == '+')
+    {
+        if (p+q>n)
+        {
+            printf("OVERFLOW\n");
+        }
+        else
+        {
+            printf("OK\n");
+        }
+    }
+
+    else if(op == '*')
+     {
+         if (p*q>n)
+         {
+             printf("OVERFLOW\n");
+         }
+         else
+        {
+            printf("OK\n");
+        }
+     }
+     else
+        {
+            printf("Invalid operator\n");
+        }
+
+    return 0;
+}
