@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int n,first,last;
+    printf("Enter a Number: ");
+    scanf("%d",&n);
+
+    last = n%10;
+    first = n;
+    while(first>=10)
+    {
+        first/=10;
+    }
+
+    printf("Sum: %d",(first + last));
+    return 0;
+}
