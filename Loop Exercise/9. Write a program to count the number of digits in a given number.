@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int n,total=0;
+    printf("Enter a Number: ");
+    scanf("%d",&n);
+
+    do
+    {
+        total++;
+        n/=10;
+    } while(n!=0);
+
+    printf("Total digits: %d\n",total);
+    return 0;
+}
